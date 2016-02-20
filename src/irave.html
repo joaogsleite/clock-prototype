@@ -1,0 +1,193 @@
+<html>
+<head>
+<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="irave.css">
+	<link rel="stylesheet" type="text/css" href="fontello/css/heart.css">
+	<script src="keyboard.js"></script>
+	<!--<script src="prefixfree.min.js"></script>-->
+</head>
+<body>
+	
+	
+<div id="editor">
+	<div class="editor" style="height:266px;">
+		<h2>Adicionar cartões ao iRave</h2>
+		<i id="events_editor">Carregue na tecla A</i>
+		<input id="addTitulo" type="text" name="titulo" placeholder="Título"/>
+		<input id="addData" type="text" name="data" placeholder="DD/MM/AAAA"/>
+		<input id="addHora" type="text" name="hora" placeholder="HH:MM"/>
+		<input id="addLocal" type="text" name="local" placeholder="Local"/>
+		<input id="addIMG" type="text" name="img" placeholder="URL Imagem"/>
+		<input onclick="addCard();" type="submit" value="Adicionar cartão (prima tecla enter)"/>
+		
+	</div>
+	<br><br>
+	<div class="editor" style="height:225px;">
+		<h2>Saúde</h2>
+		<i id="health_editor">Carregue na tecla S</i>
+		<input id="c1" type="text" name="c1" data-min="0" data-max="200" placeholder="Colestrol (0-200)"/>
+		<input id="c2" type="text" name="c2" data-min="0" data-max="0.5" placeholder="Álcool (0-0,5)"/>
+		<input id="c3" type="text" name="c3" data-min="0" data-max="100" placeholder="Asma (0-100)"/>
+		<input id="c4" type="text" name="c4" data-min="80" data-max="160" placeholder="Diabetes (70-200)"/>
+		<input onclick="editHealt();" type="submit" value="Actualizar valores (prima tecla enter)"/>
+	</div>
+</div>
+
+	
+	<div id="irave">
+		
+
+
+<br><br><br>	
+
+	<div class="buttons left">
+		<div class="circle" onclick="leftbutton()"></div>
+	</div>
+	
+<div class="bracelet"></div>
+
+<div class="irave">
+	<div class="button" onclick="leftbutton()"></div>
+	<div class="screen"><div class="wrapper">
+		
+		<div id="notification">
+
+		</div>
+		
+		<i id="icon-calendar" class="homeicon icon-calendar"></i>
+		<i id="icon-heart" class="homeicon icon-heart"></i>
+		
+		<div id="home">
+			<h3 id="clock"></h3>
+			<ul id="menu">
+				<li id="sel-events" class="selected"><span> Eventos</span></li>
+				<li id="sel-health"><span> Saúde</span></li>
+			</ul>
+			<span data-notf="alt" id="notif" class="notif"><i class="icon-bell-alt"></i> todas as notificações activadas</span>
+		</div>
+		
+		<div id="cards" class="cards">
+			<div id="events">
+				<div class="card show0" data-notf="alt" data-location="Palco A" data-time="18/05/2015 20:00">
+					<img src="content/quim.jpg">
+					<i class="homeicon icon-calendar" style="display: block;"></i>
+					<div class="bar"></div>
+					<div class="status">
+						<p>Quim Barreiros</p>
+						<span><i class="icon-bell-alt"></i> notificação do evento activada</span>
+					</div>
+				</div>
+				<div class="card show0" data-notf="alt" data-location="Palco B" data-time="19/05/2015 16:30">
+					<img src="content/rollingstones.jpg">
+					<i class="homeicon icon-calendar" style="display: block;"></i>
+					<div class="bar"></div>
+					<div class="status">
+						<p>Rolling Stones</p>
+						<span><i class="icon-bell-alt"></i> notificação do evento activada</span>
+					</div>
+				</div>
+			</div>
+			<div id="health">
+				
+				<div id="healthcard1" class="card show0" data-notf="alt" data-name="Colestrol">
+					<img src="content/colestrol.jpg">
+					<i class="homeicon icon-heart"></i>
+					<div class="bar hhl"><div id="cb1" class="meter"></div></div>
+					<div class="status">
+						<p>Colestrol</p><span>
+						<i class="icon-bell-alt"></i> notificação de saúde activada</span>
+					</div>
+				</div>
+				
+				<div id="healthcard2" class="card" data-notf="alt" data-name="Álcool">
+					<img src="content/alcool.jpg">
+					<i class="homeicon icon-heart"></i>
+					<div class="bar hhl"><div id="cb2" class="meter"></div></div>
+					<div class="status">
+						<p>Álcool</p><span>
+						<i class="icon-bell-alt"></i> notificação de saúde activada</span>
+					</div>
+				</div>
+				
+				<div id="healthcard3" class="card" data-notf="alt" data-name="Asma">
+					<img src="content/asma.jpg">
+					<i class="homeicon icon-heart"></i>
+					<div class="bar hhl"><div id="cb3" class="meter"></div></div>
+					<div class="status">
+						<p>Asma</p><span>
+						<i class="icon-bell-alt"></i> notificação de saúde activada</span>
+					</div>
+				</div>
+				
+				<div id="healthcard4" class="card" data-notf="alt" data-name="Diabetes">
+					<img src="content/diabetes.jpg">
+					<i class="homeicon icon-heart"></i>
+					<div class="bar hhl"><div id="cb4" class="meter"></div></div>
+					<div class="status">
+						<p>Diabetes</p><span>
+						<i class="icon-bell-alt"></i> notificação de saúde activada</span>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</div></div>
+	<div class="button crown">||</div>
+</div>
+
+<div class="bracelet"></div>	
+	
+	
+	<div class="buttons right">
+		<i onclick="crown('up')" class="icon-up-big"></i>
+		<div id="el" class="circle" onclick="rightbutton()"></div>
+		<i onclick="crown('down')" class="icon-down-big"></i>
+	</div>
+
+<div id="audio" style="display:none;">
+</div>
+	
+</div>
+</div>
+<script>
+var editing = false;
+function onDownCallback(event,trash,key){ return; }
+function unfocus(){
+	inputs=document.getElementsByTagName("input");
+	for(i=0; i<inputs.length; i++){
+		inputs[i].blur(); 
+	}
+}
+function onUpCallback(event,trash,key){ 
+	if(key=="a" && editing==false){
+		editing="events";
+		document.getElementById("addTitulo").focus();
+		document.getElementById("events_editor").innerHTML="Preencha o formulário para adicionar um evento";
+	}
+	if(key=="s" && editing==false){
+		editing="health";
+		document.getElementById("c1").focus();
+		document.getElementById("health_editor").innerHTML="Preencha formulário para editar valores saúde";
+	}
+	if(key=="enter" && editing=="events"){
+		editing=false;
+		unfocus();
+		document.getElementById("events_editor").innerHTML="Cartão adicionado com sucesso!";
+		setTimeout('document.getElementById("events_editor").innerHTML="Carregue na tecla A"',2000);
+		addCard();
+	}
+	if(key=="enter" && editing=="health"){
+		editing=false;
+		unfocus();
+		document.getElementById("health_editor").innerHTML="Valores actualizados com sucesso!";
+		setTimeout('document.getElementById("health_editor").innerHTML="Carregue na tecla S"',2000);
+		editHealt();
+	}
+}
+KeyboardJS.on("a,s,enter", onDownCallback, onUpCallback);
+
+</script>
+
+<script src="irave.js"></script>
+</body>
+</html>

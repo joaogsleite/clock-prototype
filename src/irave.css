@@ -1,0 +1,458 @@
+
+
+html,body{
+	margin:0;
+	padding:0px 0px 0px 0px;
+	background: #888;
+	font-size:10px;
+	font-family: Arial;
+	
+}
+html{
+	background-color: #000;
+	background-image: url("content/background.jpg");
+	background-position:top;
+	background-repeat: no-repeat;
+}
+body{
+	background: rgba(90,90,90,0.9);
+}
+
+h2, h3, p, span{ margin:0; padding:0; font-weight:normal; }
+
+
+#irave{
+	float:left;
+	position:absolute;
+	margin:0 0 0 400px;
+	width:3in;
+}
+.irave{
+	margin: 0 auto 0 auto;
+	width:1.76in;
+	display:block;
+	height:1.58in;
+	margin-bottom:-0.2in;
+}
+.screen{
+	float:left;
+	width:1.5in;
+	height:1.5in;
+	background: #ccc;
+	border: 4px solid #000;
+	border-radius: 0.1in;
+	display: block;
+	overflow: hidden;
+	margin:0;
+	padding:0;
+	z-index:99;
+	position:relative;
+	white-space: nowrap;
+}
+.wrapper{ width:10in; }
+
+.bracelet{
+	width:1.3in;
+	height:1in;
+	background:#222;
+	margin: 0 auto 0 auto;
+	left:-0.018in;
+	position:relative;
+	z-index:10;
+	margin-bottom:-0.1in;
+}
+
+.button{
+	width:0.07in;
+	height:0.23in;
+	background: #222;
+	display:block;
+	float:left;
+	margin:0.8in 0 0 0;
+}
+.button:hover{
+	cursor: default;
+}
+
+.crown{
+	width:0.1in;
+	font-size:0.18in;
+	color: #666;
+}
+
+#home,.card{
+	width:1.5in;
+	display:block;
+	overflow-y: hidden;
+	height:1.5in;
+	overflow: hidden;
+}
+
+.card{
+	background: #000;
+}
+
+.card img{
+	background: #ddd;
+	width:100%;
+	height:0.76in;
+	border: 0;
+}
+
+.card .bar, .card .status{
+	padding: 0.06in 0.05in 0 0.05in;
+	display: block;
+}
+
+
+
+.card .bar{
+	width:100%;
+	height:0.16in;
+	background: #f4f4f4;
+	color: #333;
+	font-size:0.1in;
+}
+
+.card .status{
+	padding-top:0.09in;
+	color: #ccc;
+}
+
+.card .status span{ font-size:0.08in; margin-top:0.07in; display: block; color:#fff; text-align:left; }
+.card .status p{ font-size:0.18in; text-align:left; }
+
+.card .status i{
+	margin-left:-0.01in;
+	color:#fff;
+}
+
+
+
+#home{
+	background: #000;
+	float:left;
+	height:2in;
+}
+#home h3{ color: #fff; font-size: 0.5in; text-align:center; font-weight:bold; margin-top:0.2in; margin-bottom:0.05in; }
+
+#home ul{ color: #fff; list-style: none; margin:0; padding:0; margin-bottom:0.09in; }
+#home ul li { margin-top:0.0in; display:block; width: 1.5in; height:0.17in; padding-top:0.05in; }
+#home ul li span{ margin-left:0.45in; }
+
+#home ul li.selected{
+	background: #000000;
+    background: -webkit-linear-gradient(left, #000000 0%, #444 50%, #000000 100%);
+    background: linear-gradient(to right, #000000 0%,#444 50%,#000000 100%);
+}
+
+.cards{
+	width:1.5in;
+	float:left;
+}
+
+
+@-webkit-keyframes downCard{
+	from{ margin-top:0; }
+	to{ margin-top:-1.5in; }
+}
+
+
+@keyframes downCard{
+	from{ margin-top:0; }
+	to{ margin-top:-1.5in; }
+}
+@-webkit-keyframes endDownCard{
+	0%{ margin-top:0; }
+	50%{ margin-top:-0.3in; }
+	100%{ margin-top:0; }
+}
+@keyframes endDownCard{
+	0%{ margin-top:0; }
+	50%{ margin-top:-0.3in; }
+	100%{ margin-top:0; }
+}
+@-webkit-keyframes upCard1{
+	from{ margin-top:-1.5in; }
+	to{ margin-top:0; }
+}
+@keyframes upCard1{
+	from{ margin-top:-1.5in; }
+	to{ margin-top:0; }
+}
+@-webkit-keyframes upCard0{
+	from{ margin-top:0; }
+	to{ margin-top:1.5in; }
+}
+@keyframes upCard0{
+	from{ margin-top:0; }
+	to{ margin-top:1.5in; }
+}
+@-webkit-keyframes endUpCard{
+	0%{ margin-top:0; }
+	50%{ margin-top:0.3in; }
+	100%{ margin-top:0; }
+}
+@keyframes endUpCard{
+	0%{ margin-top:0; }
+	50%{ margin-top:0.3in; }
+	100%{ margin-top:0; }
+}
+@-webkit-keyframes homeToEvents{
+	from{ margin-left:0; }
+	to{ margin-left:-1.5in; }
+}
+@keyframes homeToEvents{
+	from{ margin-left:0; }
+	to{ margin-left:-1.5in; }
+}
+@-webkit-keyframes eventsToHome{
+	from{ margin-left:-1.5in; }
+	to{ margin-left:0; }
+}
+@keyframes eventsToHome{
+	from{ margin-left:-1.5in; }
+	to{ margin-left:0; }
+}
+
+
+
+.homeToEvents{
+	margin-left: 0;
+	-webkit-animation-name: homeToEvents;
+	        animation-name: homeToEvents;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-delay:0s;
+	        animation-delay:0s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+}
+.eventsToHome{
+	margin-left: -1.5in;
+	-webkit-animation-name: eventsToHome;
+	        animation-name: eventsToHome;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-delay:0s;
+	        animation-delay:0s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+}
+.downCard{
+	margin-top: 0;
+	-webkit-animation-name: downCard;
+	        animation-name: downCard;
+	-webkit-animation-duration: 2s;
+	        animation-duration: 2s;
+	-webkit-animation-delay:0s;
+	        animation-delay:0s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+}
+
+.upCard0{
+	margin-top: 0;
+	-webkit-animation-name: upCard0;
+	        animation-name: upCard0;
+	-webkit-animation-duration: 2s;
+	        animation-duration: 2s;
+	-webkit-animation-delay:0s;
+	        animation-delay:0s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+}
+.upCard1{
+	margin-top: -1.5in;
+	-webkit-animation-name: upCard1;
+	        animation-name: upCard1;
+	-webkit-animation-duration: 2s;
+	        animation-duration: 2s;
+	-webkit-animation-delay:0s;
+	        animation-delay:0s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+}
+.endUpCard{
+	margin-top: 0;
+	-webkit-animation-name: endUpCard;
+	        animation-name: endUpCard;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-delay:0s;
+	        animation-delay:0s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+}
+.endDownCard{
+	margin-top: 0;
+	-webkit-animation-name: endDownCard;
+	        animation-name: endDownCard;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-delay:0s;
+	        animation-delay:0s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+}
+
+
+
+.eventsIconFromHome{
+	margin-top: 0.925in;
+	font-size:10px;
+	-webkit-animation-name: eventsIconFromHome;
+	        animation-name: eventsIconFromHome;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-delay:0s;
+	        animation-delay:0s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+	background:none;
+}
+@-webkit-keyframes eventsIconFromHome{
+	from{ margin-top: 0.925in; font-size:10px; background:none; height:0.12in; width:0.14in; border-radius:0.1in; }
+	to{ margin-top: 0.576in; margin-left:0.15in; font-size:14px; background: #444; height:0.17in; width:0.19in; border-radius:0.16in; }
+}
+@keyframes eventsIconFromHome{
+	from{ margin-top: 0.925in; font-size:10px; background:none; height:0.12in; width:0.14in; border-radius:0.1in; }
+	to{ margin-top: 0.576in; margin-left:0.15in; font-size:14px; background: #444; height:0.17in; width:0.19in; border-radius:0.16in; }
+}
+
+
+
+
+.buttons{
+	width:0.2in;
+	font-size:0.2in;
+	font-weight:normal;
+	position:absolute;
+}
+.right{
+	margin: -1.72in 0px 0px 50%;
+	left:0.9in;
+}
+.left{
+	margin:1.765in 0 0 50%;
+	left:-1.18in;
+	
+}
+.buttons i{
+	height: 0.3in;
+	display:block;
+}
+.buttons i:hover{
+	cursor: hand;
+}
+
+.circle{
+	width:0.1in;
+	height: 0.1in;
+	border-radius: 0.05in;
+	background: #000;
+	margin:0 0 0.1in 0.09in;
+}
+.circle:hover{
+	cursor: hand;
+}
+
+.homeicon{
+	position:absolute;
+	z-index:999;
+	color: #fff;
+	display:block;
+	height:0.12in;
+	width:0.14in;
+	border-radius:0.1in;
+	padding: 0.031in 0.021in 0.016in 0.01in;
+}
+.icon-calendar{ margin: 0.845in 0 0 0.26in; }
+.icon-heart{ margin: 1.08in 0 0 0.26in; }
+
+.fadeOut{ opacity:1; filter:alpha(opacity=100); -webkit-animation-name: fadeOut; animation-name: fadeOut; -webkit-animation-duration: 0.5s; animation-duration: 0.5s; -webkit-animation-delay:0s; animation-delay:0s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+@-webkit-keyframes fadeOut{ from{ opacity:1; filter:alpha(opacity=100); } to{ opacity:0; filter:alpha(opacity=0); } }
+@keyframes fadeOut{ from{ opacity:1; filter:alpha(opacity=100); } to{ opacity:0; filter:alpha(opacity=0); } }
+	
+.fadeIn{ opacity:0; filter:alpha(opacity=0); -webkit-animation-name: fadeIn; animation-name: fadeIn; -webkit-animation-duration: 0.5s; animation-duration: 0.5s; -webkit-animation-delay:0s; animation-delay:0s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+@-webkit-keyframes fadeIn{ from{ opacity:0; filter:alpha(opacity=0); } to{ opacity:1; filter:alpha(opacity=100); } }
+@keyframes fadeIn{ from{ opacity:0; filter:alpha(opacity=0); } to{ opacity:1; filter:alpha(opacity=100); } }
+	
+
+.card .icon-calendar, .card .icon-heart{
+	top:0;
+	position:relative;
+	margin: -0.18in 0 -0.037in 0.15in;
+	font-size:14px; background: #444; height:0.17in; width:0.19in; border-radius:0.16in;
+	display:none;
+}
+#notification .card .icon-bell-alt{
+	top:0;
+	position:relative;
+	margin: -0.18in 0 -0.037in 0.15in;
+	font-size:14px; background: #444; height:0.17in; width:0.19in; border-radius:0.16in;
+}
+	
+
+
+.backHelpAnimation{ -webkit-animation-iteration-count: 7; animation-iteration-count: 7; margin-left:0; -webkit-animation-name: backHelpAnimation; animation-name: backHelpAnimation; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-delay:0s; animation-delay:0s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+@-webkit-keyframes backHelpAnimation{ 0%{ margin-left:0; } 50%{ margin-left:0.1in; } 100%{ margin-left:0; } }
+@keyframes backHelpAnimation{ 0%{ margin-left:0; } 50%{ margin-left:0.1in; } 100%{ margin-left:0; } }
+
+.notificationAnimation{ -webkit-animation-iteration-count: 7; animation-iteration-count: 7; float:left; margin-top:0.04in; -webkit-animation-name: notificationAnimation; animation-name: notificationAnimation; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-delay:0s; animation-delay:0s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+@-webkit-keyframes notificationAnimation{ 0%{ margin-top:0.04in; } 100%{ margin-top:0; } }
+@keyframes notificationAnimation{ 0%{ margin-top:0.04in; } 100%{ margin-top:0; } }
+.card .status .icon-bell-alt{float: left;}
+
+
+
+#notification{
+	position:absolute;
+	z-index:999999;
+}
+
+
+#home span.notif{ font-size:0.08in; margin-top:0; display: block; color:#fff; text-align:center; }
+
+
+.notificationAllAnimation{ -webkit-animation-iteration-count: 7; animation-iteration-count: 7; float:none; padding-top:0.04in; -webkit-animation-name: notificationAllAnimation; animation-name: notificationAllAnimation; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-delay:0s; animation-delay:0s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+@-webkit-keyframes notificationAllAnimation{ 0%{ padding-top:0.04in; } 100%{ padding-top:0; } }
+@keyframes notificationAllAnimation{ 0%{ padding-top:0.04in; } 100%{ padding-top:0; } }
+
+
+#editor{
+	width:400px;
+	height:500px;
+	margin:60px 0 0 50px;
+	float:left;
+	position: absolute;
+	
+}
+.editor{
+	width:240px;
+	background:#ddd;
+}
+.editor input{
+	width:200px;
+	margin: 10px 20px 0px 20px;
+	height: 30px;
+	padding: 3px;
+	border:0px;
+}
+.editor h2{
+	padding-top:10px;
+	margin: 10px 0 0 20px;
+}
+.editor i{
+	padding-top:3px;
+	margin: 10px 0 0 20px;
+}
+.editor input[type="submit"] { background: #fff; }
+
+#events,#health{ display:none; position:absolute; margin:0; opacity:0; filter:alpha(opacity=0); display:block; }
+
+
+.hhl .bar{ padding-bottom:0; }
+
+.hhl .meter{ height:0.21in; background:#0f0; margin: -0.052in 0 -0.06in -0.05in; position:relative; }
+
